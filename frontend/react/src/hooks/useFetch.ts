@@ -30,7 +30,8 @@ export function useFetch<T = unknown, N = undefined>(
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
-      const result: T = await response.json();
+      const text = await response.text();
+      const result = text ? JSON.parse(text) : {};
       setData(result);
 
       if (onSuccess) {
