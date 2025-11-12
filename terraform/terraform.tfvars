@@ -83,4 +83,4 @@ db_subnet_group_name = "rds-private-subnet-group"
 ################################################################################
 
 domain_name = "epam-nick.pp.ua"
-certificate_arn = "arn:aws:acm:eu-central-1:037151312631:certificate/7aceabe4-7fe9-47f4-b3cb-b1f59850b80a"
+certificate_arn = "arn:aws:acm:eu-central-1:037151312631:certificate/872397b0-3d36-4f75-bea0-d14cf46a53b2"
