@@ -61,6 +61,8 @@ const ParticipantsList = ({ participants }: ParticipantsListProps) => {
               key={admin?.id}
               firstName={admin?.firstName}
               lastName={admin?.lastName}
+              userCode={admin?.userCode || ""}
+              id={admin?.id}
               isCurrentUser={userCode === admin?.userCode}
               isAdmin={admin?.isAdmin}
               isCurrentUserAdmin={userCode === admin?.userCode}
@@ -74,6 +76,8 @@ const ParticipantsList = ({ participants }: ParticipantsListProps) => {
               key={user?.id}
               firstName={user?.firstName}
               lastName={user?.lastName}
+              userCode={admin?.userCode || ""}
+              id={user?.id}
               isCurrentUser={userCode === user?.userCode}
               isCurrentUserAdmin={userCode === admin?.userCode}
               participantLink={generateParticipantLink(user?.userCode)}

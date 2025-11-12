@@ -3,10 +3,13 @@ import InfoButton from "../info-button/InfoButton";
 import ItemCard from "../item-card/ItemCard";
 import { type ParticipantCardProps } from "./types";
 import "./ParticipantCard.scss";
+import { DeleteUserButton } from "@components/common/delete-user-button/DeleteUserButton.tsx";
 
 const ParticipantCard = ({
   firstName,
   lastName,
+  id,
+  userCode,
   isCurrentUser = false,
   isAdmin = false,
   isCurrentUserAdmin = false,
@@ -38,6 +41,10 @@ const ParticipantCard = ({
 
         {!isCurrentUser && isAdmin ? (
           <InfoButton infoMessage={adminInfo} />
+        ) : null}
+
+        {!isCurrentUser && isCurrentUserAdmin ? (
+          <DeleteUserButton userCode={userCode} id={id} />
         ) : null}
       </div>
     </ItemCard>
